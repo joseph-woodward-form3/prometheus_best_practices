@@ -8,7 +8,7 @@ Q: When measuing something, what units should I use? (eg, milliseconds or second
 
 Try to stick to the base units presented by Prometheus for better compatibility, in the case of time `seconds` is recommended.
 
-> Prometheus does not have any units hard coded. For better compatibility, base units should be used.
+> Prometheus does not have any units hard coded. For better compatibility, [base units](https://prometheus.io/docs/practices/naming/#base-units) should be used.
 
 [Source](https://prometheus.io/docs/practices/naming/#base-units)
 
