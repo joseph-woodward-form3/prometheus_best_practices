@@ -46,6 +46,8 @@ Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/na
 
 [Source](https://prometheus.io/docs/practices/naming/#metric-names)
 
+--
+
 **Q: What kind of values or data can I use for my labels?**
 
 Labels values are flexible, however it's important to ensure the the values are of a known size
