@@ -17,6 +17,8 @@ Try to stick to the base units presented by Prometheus for better compatibility,
 Q: Should a metrics such as database read/writes be represented as separate metrics, or a single metric split by labels (ie `operation="read|write"`)?
 
 > Read/write and send/receive are best as separate metrics, rather than as a label. This is usually because you care about only one of them at a time, and it is easier to use them that way.  
+>
+> The rule of thumb is that one metric should make sense when summed or averaged. 
 
 [Source](https://prometheus.io/docs/instrumenting/writing_exporters/#labels)
 
@@ -24,11 +26,8 @@ That said, the [Prometheus documentation](https://prometheus.io/docs/practices/n
 
 > Use labels to differentiate the characteristics of the thing that is being measured:
 > 
-> `api_http_requests_total` - differentiate request types: `operation="create|update|delete`"
-> `api_request_duration_seconds` - differentiate request stages: `stage="extract|transform|load`"
-
-```
-
+> - `api_http_requests_total` - differentiate request types: `operation="create|update|delete`"  
+> - `api_request_duration_seconds` - differentiate request stages: `stage="extract|transform|load`"
 
 ---
 
