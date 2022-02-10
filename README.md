@@ -50,7 +50,7 @@ Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/na
 
 **Q: What kind of values or data can I use for my labels?**
 
-Labels values are flexible, however it's important to ensure the the values are of a known size to avoid high-cardinality performance issues. This means avoiding label values such as:
+Labels values are flexible, however it's **important to ensure the the values are of a known size** to avoid high-cardinality performance issues. This means avoiding label values such as:
 
 - universally unique identifier (UUID)
 - user IDs
