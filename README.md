@@ -48,13 +48,25 @@ Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/na
 
 ---
 
-**Q: What kind of values or data can I use for my labels?**
+**Q: Are there limits on the type of data I can store in labels?**
 
-Labels values are flexible, however it's **important to ensure the the values are of a known size** to avoid high-cardinality performance issues. This means avoiding label values such as:
+Yes, it's **very important** to ensure the the values are of a known size, unbounded data sets can cause high-cardinality performance issues. This means avoiding label values such as:
 
 - universally unique identifier (UUID)
 - user IDs
 - email addresses 
+
+For instance:
+
+```
+http_request_duration_seconds_count { path="/payments/49e90938-5a5b-4649-9451-56f9d01c9727/" } // BAD!
+```
+```
+http_request_duration_seconds_count { path="/payments/:id/" } // GOOD!
+```
+---
+
+**Q: What kind of values or data can I use for my labels?**
 
 > Label names may contain ASCII letters, numbers, as well as underscores. They must match the regex [a-zA-Z_][a-zA-Z0-9_]*. Label names beginning with __ are reserved for internal use.
 >
