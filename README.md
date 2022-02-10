@@ -64,6 +64,8 @@ http_request_duration_seconds_count { path="/payments/49e90938-5a5b-4649-9451-56
 ```
 http_request_duration_seconds_count { path="/payments/:id/" } // GOOD!
 ```
+Remeber that [cardinality is key](https://www.robustperception.io/cardinality-is-key).
+
 ---
 
 **Q: What kind of values or data can I use for my labels?**
