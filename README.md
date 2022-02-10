@@ -2,15 +2,23 @@
 
 This is a list of best practices I've found as I've learned more and more about Prometheus.
 
-## Metric Names
+## Metric Creation
+
+Q: When measuing something, what units should I use? (eg, milliseconds or seconds?) 
+
+Try to stick to the base units presented by Prometheus for better compatibility, in the case of time `seconds` is recommended.
+
+> Prometheus does not have any units hard coded. For better compatibility, base units should be used.
+
+[Source](https://prometheus.io/docs/practices/naming/#base-units)
 
 Q: Should a metrics such as database read/writes be represented as separate metrics, or a single metric split by labels (ie `operation="read|write"`)?
 
-> Read/write and send/receive are best as separate metrics, rather than as a label. This is usually because you care about only one of them at a time, and it is easier to use them that way.
+> Read/write and send/receive are best as separate metrics, rather than as a label. This is usually because you care about only one of them at a time, and it is easier to use them that way.  
 
 [Source](https://prometheus.io/docs/instrumenting/writing_exporters/#labels)
 
 
-Useful Links:
+## Useful Links:
 
 - https://prometheus.io/docs/instrumenting/writing_exporters/ (even though it's about writing exporters, a lot of it is relevant to implementing metrics)
