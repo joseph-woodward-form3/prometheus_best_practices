@@ -4,7 +4,7 @@ This is a list of best practices I've found as I've learned more and more about 
 
 ## Metric Creation
 
-Q: When measuing something, what units should I use? (eg, milliseconds or seconds?) 
+**Q: When measuing something, what units should I use? (eg, milliseconds or seconds?)**
 
 Try to stick to the base units presented by Prometheus for better compatibility, in the case of time `seconds` is recommended.
 
@@ -14,7 +14,7 @@ Try to stick to the base units presented by Prometheus for better compatibility,
 
 ---
 
-Q: Should a metrics such as database read/writes be represented as separate metrics, or a single metric split by labels (ie `operation="read|write"`)?
+**Q: Should a metrics such as database read/writes be represented as separate metrics, or a single metric split by labels (ie `operation="read|write"`)?**
 
 > Read/write and send/receive are best as separate metrics, rather than as a label. This is usually because you care about only one of them at a time, and it is easier to use them that way.  
 >
@@ -31,7 +31,7 @@ That said, the [Prometheus documentation](https://prometheus.io/docs/practices/n
 
 ---
 
-Q: Are there common conventions for metric names?
+**Q: Are there common conventions for metric names?**
 
 Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/naming/#metric-names) that gives examples of metric names that you should follow, for instance:
 
@@ -46,7 +46,7 @@ Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/na
 
 [Source](https://prometheus.io/docs/practices/naming/#metric-names)
 
-Q: What kind of values or data can I use for my labels?
+**Q: What kind of values or data can I use for my labels?**
 
 Labels values are flexible, however it's important to ensure the the values are of a known size
 
