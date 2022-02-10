@@ -1,6 +1,6 @@
 # Prometheus Best Practices and Common Questions
 
-This is a list of best practices I've found as I've learned more and more about Prometheus.
+This is a list of best practices I've found and answers to questions I've frequently had as I've learned more and more about Prometheus.
 
 ## Metric Creation
 
