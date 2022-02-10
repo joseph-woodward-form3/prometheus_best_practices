@@ -50,13 +50,18 @@ Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/na
 
 **Q: What kind of values or data can I use for my labels?**
 
-Labels values are flexible, however it's important to ensure the the values are of a known size
+Labels values are flexible, however it's important to ensure the the values are of a known size to avoid high-cardinality performance issues. This means avoiding label values such as:
+
+- universally unique identifier (UUID)
+- user IDs
+- email addresses 
 
 > Label names may contain ASCII letters, numbers, as well as underscores. They must match the regex [a-zA-Z_][a-zA-Z0-9_]*. Label names beginning with __ are reserved for internal use.
 >
 > Label values may contain any Unicode characters.
 > 
 > A label with an empty label value is considered equivalent to a label that does not exist.
+
 
 ## Useful Links:
 
