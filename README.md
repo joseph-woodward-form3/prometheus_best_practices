@@ -1,4 +1,4 @@
-# Prometheus Best Practices and common questions
+# Prometheus Best Practices and Common Questions
 
 This is a list of best practices I've found as I've learned more and more about Prometheus.
 
