@@ -68,11 +68,15 @@ http_request_duration_seconds_count { path="/payments/:id/" } // GOOD!
 
 **Q: What kind of values or data can I use for my labels?**
 
+As long as you're aware of the dangers of high-cardinality data, label values are quite flexible. 
+
 > Label names may contain ASCII letters, numbers, as well as underscores. They must match the regex [a-zA-Z_][a-zA-Z0-9_]*. Label names beginning with __ are reserved for internal use.
 >
 > Label values may contain any Unicode characters.
 > 
 > A label with an empty label value is considered equivalent to a label that does not exist.
+
+[Source](https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels)
 
 
 ## Useful Links:
