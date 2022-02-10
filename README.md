@@ -85,3 +85,6 @@ As long as you're aware of the dangers of high-cardinality data, label values ar
 
 - https://prometheus.io/docs/instrumenting/writing_exporters/ (even though it's about writing exporters, a lot of it is relevant to implementing metrics)
 - https://prometheus.io/docs/practices/naming/#metric-and-label-naming
+
+
+## Prometheus Query Language (PromQL)
