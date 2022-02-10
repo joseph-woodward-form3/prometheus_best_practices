@@ -20,6 +20,16 @@ Q: Should a metrics such as database read/writes be represented as separate metr
 
 [Source](https://prometheus.io/docs/instrumenting/writing_exporters/#labels)
 
+That said, the [Prometheus documentation](https://prometheus.io/docs/practices/naming/#labels) does say:
+
+> Use labels to differentiate the characteristics of the thing that is being measured:
+> 
+> `api_http_requests_total` - differentiate request types: `operation="create|update|delete`"
+> `api_request_duration_seconds` - differentiate request stages: `stage="extract|transform|load`"
+
+```
+
+
 ---
 
 Q: Are there common conventions for metric names?
@@ -36,6 +46,16 @@ Yes, Prometheus has a [conventions page](https://prometheus.io/docs/practices/na
 > - `foobar_build_info` (for a pseudo-metric that provides metadata about the running binary)
 
 [Source](https://prometheus.io/docs/practices/naming/#metric-names)
+
+Q: What kind of values or data can I use for my labels?
+
+Labels values are flexible, however it's important to ensure the the values are of a known size
+
+> Label names may contain ASCII letters, numbers, as well as underscores. They must match the regex [a-zA-Z_][a-zA-Z0-9_]*. Label names beginning with __ are reserved for internal use.
+>
+> Label values may contain any Unicode characters.
+> 
+> A label with an empty label value is considered equivalent to a label that does not exist.
 
 ## Useful Links:
 
