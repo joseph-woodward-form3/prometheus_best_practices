@@ -61,3 +61,4 @@ Labels values are flexible, however it's important to ensure the the values are 
 ## Useful Links:
 
 - https://prometheus.io/docs/instrumenting/writing_exporters/ (even though it's about writing exporters, a lot of it is relevant to implementing metrics)
+- https://prometheus.io/docs/practices/naming/#metric-and-label-naming
